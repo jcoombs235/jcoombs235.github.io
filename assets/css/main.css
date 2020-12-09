@@ -2906,6 +2906,11 @@ button:disabled,
   font-weight: 600;
 }
 
+#header .logo img {
+  height: auto;
+  width: 8%;
+}
+
 #header a {
   -moz-transition: color 0.2s ease-in-out;
   -webkit-transition: color 0.2s ease-in-out;
