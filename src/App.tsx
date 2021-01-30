@@ -1,19 +1,12 @@
 import React from "react";
-import "./App.css";
-import { About } from "./components/About/About";
-import { Contact } from "./components/Contact/Contact";
-import { Navbar } from "./components/Navbar/Navbar";
-import { Projects } from "./components/Projects/Projects";
+import Home from "./components/Home";
 
-function App() {
-  return (
-    <div className="App">
-      <Navbar />
-      <About />
-      <Projects />
-      <Contact />
-    </div>
-  );
+export default class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <Home />
+      </div>
+    );
+  }
 }
-
-export default App;
