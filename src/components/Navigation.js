@@ -1,7 +1,7 @@
-import * as React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 
-export default class Navigation extends React.Component {
+class Navigation extends React.Component {
   render() {
     return (
       <nav>
@@ -17,3 +17,5 @@ export default class Navigation extends React.Component {
     );
   }
 }
+
+export default Navigation;
