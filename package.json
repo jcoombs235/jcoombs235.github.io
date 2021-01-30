@@ -1,5 +1,6 @@
 {
   "name": "jcoombs235.github.io",
+  "homepage": "https://jcoombs235.github.io/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,6 +16,8 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -41,6 +44,7 @@
   "devDependencies": {
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "gh-pages": "^3.1.0",
     "typescript": "^4.1.3"
   }
 }
