@@ -4,11 +4,13 @@ import GlobalStyle from "./theme/globalStyle";
 import Home from "./components/Home";
 import Navigation from "./components/Navigation";
 import ACCFuelCalculator from "./components/ACCFuelCalculator";
+import { ThemeProvider } from "styled-components";
+import { theme } from "./theme/theme";
 
 class App extends React.Component {
   render() {
     return (
-      <>
+      <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Router>
           <Navigation />
@@ -21,7 +23,7 @@ class App extends React.Component {
             </Route>
           </Switch>
         </Router>
-      </>
+      </ThemeProvider>
     );
   }
 }
