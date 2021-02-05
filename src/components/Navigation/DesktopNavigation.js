@@ -16,6 +16,8 @@ const DesktopNavigation = () => {
 
 const Header = styled.header`
   top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   background-color: ${({ theme }) => theme.firstLayer};
   position: fixed;

@@ -13,12 +13,13 @@ class App extends React.Component {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Router>
-          <Navigation />
           <Switch>
             <Route path="/acc-fuel-calculator">
+              <Navigation />
               <ACCFuelCalculator />
             </Route>
             <Route path="/">
+              <Navigation />
               <Home />
             </Route>
           </Switch>
