@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import GlobalStyle from "./theme/globalStyle";
 import Home from "./components/Home";
 import Navigation from "./components/Navigation";
-import ACCFuelCalculator from "./components/ACCFuelCalculator";
+import ACCFuelCalculator, { Calculator } from "./components/ACCFuelCalculator";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./theme/theme";
 
@@ -14,6 +14,9 @@ class App extends React.Component {
         <GlobalStyle />
         <Router>
           <Switch>
+            <Route path="/acc-fuel-calculator-external">
+              <Calculator />
+            </Route>
             <Route path="/acc-fuel-calculator">
               <Navigation />
               <ACCFuelCalculator />
