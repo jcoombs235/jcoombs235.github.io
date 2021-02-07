@@ -50,7 +50,6 @@ const GlobalStyle = createGlobalStyle`
     }
 
     button:focus-visible,
-    button:focus,
     input[type="submit"]:focus-visible,
     input[type="reset"]:focus-visible,
     input[type="button"]:focus-visible {
@@ -77,7 +76,9 @@ const GlobalStyle = createGlobalStyle`
     input[type="number"],
     textarea,
     select {
-      width: 400px;
+      width: 200px;
+      margin: 5px 0;
+      margin-right: 10px;
     }
 
     input:focus,

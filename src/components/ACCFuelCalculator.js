@@ -13,8 +13,15 @@ export const Calculator = () => {
       litres: undefined,
     },
     onSubmit: (values) => {
-      setRiskyFuel(0);
-      setSafeFuel(1);
+      const lapTime = values.minutes + values.seconds / 60;
+      const laps = values.stint / lapTime;
+      const risky = Math.ceil(laps * values.litres);
+      const safe = Math.ceil(risky + values.litres);
+
+      if (risky > 0) {
+        setRiskyFuel(Math.ceil(risky));
+        setSafeFuel(Math.ceil(safe));
+      }
     },
   });
 
@@ -24,31 +31,47 @@ export const Calculator = () => {
       <input
         id="minutes"
         name="minutes"
+        placeholder="Minutes"
         type="number"
-        onChange={formik.handleChange}
+        onChange={(e) => {
+          formik.handleChange(e);
+          formik.submitForm();
+        }}
         value={formik.values.minutes}
       />
       <input
         id="seconds"
         name="seconds"
+        placeholder="Seconds"
         type="number"
-        onChange={formik.handleChange}
+        onChange={(e) => {
+          formik.handleChange(e);
+          formik.submitForm();
+        }}
         value={formik.values.seconds}
       />
       <label>Stint Length</label>
       <input
         id="stint"
         name="stint"
+        placeholder="Minutes"
         type="number"
-        onChange={formik.handleChange}
+        onChange={(e) => {
+          formik.handleChange(e);
+          formik.submitForm();
+        }}
         value={formik.values.stint}
       />
       <label>Litres Per Lap</label>
       <input
         id="litres"
         name="litres"
+        placeholder="Litres"
         type="number"
-        onChange={formik.handleChange}
+        onChange={(e) => {
+          formik.handleChange(e);
+          formik.submitForm();
+        }}
         value={formik.values.litres}
       />
       <h2>Risky Fuel {riskyFuel}L</h2>
