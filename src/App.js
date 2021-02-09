@@ -3,9 +3,10 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import GlobalStyle from "./theme/globalStyle";
 import Home from "./components/Home";
 import Navigation from "./components/Navigation";
-import ACCFuelCalculator, { Calculator } from "./components/ACCFuelCalculator";
+import ACCFuelCalculator from "./components/ACCFuelCalculator";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./theme/theme";
+import Calculator from "components/Calculator/Calculator";
 
 class App extends React.Component {
   render() {
