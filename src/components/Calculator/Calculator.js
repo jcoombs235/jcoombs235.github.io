@@ -15,9 +15,20 @@ const FuelCalculator = () => {
       litres: undefined,
     },
     onSubmit: (values) => {
+      if (!values.minutes && values.seconds) {
+        // @ts-ignore
+        values.minutes = 0;
+      } else if (!values.seconds && values.minutes && values.stint) {
+        // @ts-ignore
+        values.seconds = 0;
+      }
+      // @ts-ignore
       const lapTime = values.minutes + values.seconds / 60;
+      // @ts-ignore
       const laps = values.stint / lapTime;
+      // @ts-ignore
       const risky = Math.ceil(laps * values.litres);
+      // @ts-ignore
       const safe = Math.ceil(risky + values.litres);
 
       if (risky > 0) {
@@ -79,7 +90,6 @@ const FuelCalculator = () => {
         />
         <h2>Risky Fuel {riskyFuel}L</h2>
         <h2>Safe Fuel {safeFuel}L</h2>
-        <button type="submit">Calculate</button>
       </form>
       <AppLinks />
     </FormContainer>
