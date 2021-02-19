@@ -1,16 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-class AppLinks extends React.Component {
-  render() {
-    return (
-      <>
-        <AppButtons>{AndroidLink}</AppButtons>
-        <AppButtons>{IOSLink}</AppButtons>
-      </>
-    );
-  }
-}
+export const AppLinks = () => {
+  return (
+    <>
+      <AppButtons>{AndroidLink}</AppButtons>
+      <AppButtons>{IOSLink}</AppButtons>
+    </>
+  );
+};
 
 const AppButtons = styled.div`
   display: block;
@@ -42,5 +40,3 @@ const IOSLink = (
     />
   </a>
 );
-
-export default AppLinks;

@@ -1,19 +1,19 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import GlobalStyle from "./theme/globalStyle";
-import Home from "./components/Home";
-import Navigation from "./components/Navigation";
-import ACCFuelCalculator from "./components/ACCFuelCalculator";
+import { Home } from "./components/Home";
+import { Navigation } from "./components/Navigation";
+import { ACCFuelCalculator } from "./components/ACCFuelCalculator";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./theme/theme";
-import Calculator from "components/Calculator/Calculator";
+import { Calculator } from "./components/Calculator/Calculator";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 class App extends React.Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Router>
+        <BrowserRouter>
           <Switch>
             <Route path="/acc-fuel-calculator-external">
               <Calculator />
@@ -27,7 +27,7 @@ class App extends React.Component {
               <Home />
             </Route>
           </Switch>
-        </Router>
+        </BrowserRouter>
       </ThemeProvider>
     );
   }

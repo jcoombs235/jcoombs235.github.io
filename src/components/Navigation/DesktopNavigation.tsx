@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import NavigationLinks from "./NavigationLinks";
-import NavigationLogo from "./NavigationLogo";
+import { NavigationLinks } from "./NavigationLinks";
+import { NavigationLogo } from "./NavigationLogo";
 
-const DesktopNavigation = () => {
+export const DesktopNavigation = () => {
   return (
     <Header>
       <StyledNav>
@@ -30,5 +30,3 @@ const StyledNav = styled.nav`
   width: 100%;
   margin: 0 auto;
 `;
-
-export default DesktopNavigation;

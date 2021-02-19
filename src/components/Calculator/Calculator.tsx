@@ -1,9 +1,9 @@
 import { useFormik } from "formik";
 import React from "react";
 import styled from "styled-components";
-import AppLinks from "./AppLinks";
+import { AppLinks } from "./AppLinks";
 
-const FuelCalculator = () => {
+export const Calculator = () => {
   const [riskyFuel, setRiskyFuel] = React.useState(0);
   const [safeFuel, setSafeFuel] = React.useState(0);
 
@@ -104,11 +104,3 @@ const FormContainer = styled.div`
     justify-content: center;
   }
 `;
-
-class Calculator extends React.Component {
-  render() {
-    return <FuelCalculator />;
-  }
-}
-
-export default Calculator;

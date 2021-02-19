@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-const NavigationLinks = () => {
+export const NavigationLinks = () => {
   return (
     <InlineMenu>
       <StyledLink to="/">
@@ -49,5 +49,3 @@ const StyledLink = styled(NavLink)`
     color: ${({ theme }) => theme.highlightedTextColor};
   }
 `;
-
-export default NavigationLinks;
