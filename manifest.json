@@ -1,6 +1,7 @@
 {
   "short_name": "Jake Coombs",
-  "name": "Jake Coombs Personal Site",
+  "name": "Jake Coombs - Apprentice Software Engineer",
+  "description": "Jake Coombs - Apprentice Software Engineer. Experienced in React, Typescript, Javascript, Flutter, Dart, SQL, PHP, CSS, HTML.",
   "icons": [
     {
       "src": "favicon.ico",
