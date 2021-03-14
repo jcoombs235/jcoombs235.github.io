@@ -23,7 +23,7 @@ export const FlutterCalculator = ({ external }: IProps) => {
           src="https://acc-fuel-calculator-f55cb.web.app/#/"
           title="ACC Fuel Calculator"
           width="100%"
-          height={size[1] - (external ? 5 : 100)}
+          height={size[1] - 100}
           frameBorder="0"
         />
       </StyledDiv>
@@ -35,7 +35,7 @@ export const FlutterCalculator = ({ external }: IProps) => {
       src="https://acc-fuel-calculator-f55cb.web.app/#/"
       title="ACC Fuel Calculator"
       width="100%"
-      height={size[1] - (external ? 5 : 100)}
+      height={size[1] - 5}
       frameBorder="0"
     />
   );
