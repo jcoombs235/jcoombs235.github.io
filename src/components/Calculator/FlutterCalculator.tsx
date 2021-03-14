@@ -1,10 +1,11 @@
 import React from "react";
+import styled from "styled-components";
 
 interface IProps {
   external?: boolean;
 }
 
-export const ACCFuelCalculator = ({ external }: IProps) => {
+export const FlutterCalculator = ({ external }: IProps) => {
   const [size, setSize] = React.useState([0, 0]);
   React.useLayoutEffect(() => {
     function updateSize() {
@@ -14,6 +15,20 @@ export const ACCFuelCalculator = ({ external }: IProps) => {
     updateSize();
     return () => window.removeEventListener("resize", updateSize);
   }, []);
+
+  if (!external) {
+    return (
+      <StyledDiv>
+        <iframe
+          src="https://acc-fuel-calculator-f55cb.web.app/#/"
+          title="ACC Fuel Calculator"
+          width="100%"
+          height={size[1] - (external ? 5 : 100)}
+          frameBorder="0"
+        />
+      </StyledDiv>
+    );
+  }
 
   return (
     <iframe
@@ -25,3 +40,7 @@ export const ACCFuelCalculator = ({ external }: IProps) => {
     />
   );
 };
+
+const StyledDiv = styled.div`
+  padding-top: 20px;
+`;

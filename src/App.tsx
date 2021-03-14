@@ -2,7 +2,7 @@ import React from "react";
 import GlobalStyle from "./theme/globalStyle";
 import { Home } from "./components/Home";
 import { Navigation } from "./components/Navigation";
-import { ACCFuelCalculator } from "./components/ACCFuelCalculator";
+import { FlutterCalculator } from "./components/Calculator/FlutterCalculator";
 import styled, { ThemeProvider } from "styled-components";
 import { theme } from "./theme/theme";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
@@ -15,12 +15,12 @@ class App extends React.Component {
         <BrowserRouter>
           <Switch>
             <Route path="/acc-fuel-calculator-external">
-              <ACCFuelCalculator external />
+              <FlutterCalculator external />
             </Route>
             <Route path="/acc-fuel-calculator">
               <InternalPage>
                 <Navigation />
-                <ACCFuelCalculator />
+                <FlutterCalculator />
               </InternalPage>
             </Route>
             <Route path="/">
